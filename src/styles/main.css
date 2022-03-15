@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "gothic", sans-serif;
+}
+
+img {
+    display: block;
+}
+
+nav {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(146, 180, 245);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ }
+
+/* app-bar {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(146, 180, 245);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ } */
+
+
+ footer {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(146, 180, 245);
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ footer div {
+     padding: 16px;
+ }
+
+ .app-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+ }
+
+ .app-bar-logo {
+    justify-content: flex-start;
+ }
+
+ .app-bar-menu {
+    justify-content: flex-end;
+ }
+
+ 
+/* IPhone 6 Plus */
+@media screen and (max-width: 1200px) {
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+/* Google Pixel */
+@media screen and (min-width: 1200px) {
+    img {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    
+}
+ 
