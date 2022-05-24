@@ -18,7 +18,10 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+            options: {
+              url: false,
           },
+        },
         ],
       },
     ],
@@ -27,6 +30,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
+      favicon: 'src/public/icons/Web/icons8-meals-flaticons-lineal-color-32.png',
     }),
     new CopyWebpackPlugin({
       patterns: [
