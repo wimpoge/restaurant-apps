@@ -1,11 +1,11 @@
 class AppBar extends HTMLElement {
-  connectedCallback() {
-    this.render();
+  connectedCallback () {
+    this.render()
   }
 
-  render() {
+  render () {
     this.innerHTML = `
-        <nav>
+        <nav id="nav">
         <div class="app-bar-container" id="app-bar-container">
             <div class="app-bar-logo">
                 <span>Restaurant Apps</span>
@@ -18,14 +18,13 @@ class AppBar extends HTMLElement {
             <div class="topnav" id="myTopnav">
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Menu">☰</a>
                 <a href="/">Home</a>
-                <a href="#">Favorite</a>
+                <a href="#/favorite">Favorite</a>
                 <a href="https://github.com/wimpoge">About Us</a>
-               
             </div>
         </div>
     </nav>
-        `;
-  } 
+        `
+  }
 }
 
-customElements.define('app-bar', AppBar);
+customElements.define('app-bar', AppBar)

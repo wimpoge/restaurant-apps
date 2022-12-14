@@ -1,6 +1,6 @@
-import data from '../src/DATA.json';
+import data from '../src/DATA.json'
 
-let html = '';
+let html = ''
 data.restaurants.forEach((resto) => {
   html += `
     <div class="wrapper">
@@ -10,8 +10,9 @@ data.restaurants.forEach((resto) => {
             <span>Rating : ${resto.rating}</span>
             <h1>${resto.name}</h1>
             <p>${resto.description}</p>
+            <button class="detail-button">Detail</button>
         </div>   
     </div>
-    `;
-  document.getElementById('listRestaurant').innerHTML = html;
-});
+    `
+  document.getElementById('listRestaurant').innerHTML = html
+})

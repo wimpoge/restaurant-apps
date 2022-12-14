@@ -1,18 +1,18 @@
 class Footer extends HTMLElement {
-  connectedCallback() {
-    this.render();
+  connectedCallback () {
+    this.render()
   }
 
-  render() {
+  render () {
     this.innerHTML = `
         <footer>
             <div>
                 <span>Copyright © 2022 - Restaurant Apps</span>
             </div>
         </footer>
-        `;
+        `
   }
 }
 
-customElements.define('the-footer', Footer);
-export default Footer;
+customElements.define('the-footer', Footer)
+export default Footer
