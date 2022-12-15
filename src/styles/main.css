@@ -24,7 +24,10 @@ body {
 
 .jumbotron {
     background-image: url('/images/heros/hero-image_2.jpg');
-    height: 100;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 50rem;
+    
 }
 
 app-bar {
@@ -179,6 +182,7 @@ app-bar {
 }
 .restauran-card_detail_menu ul {
     list-style: none;
+    text-align: left;
     
 }
 
@@ -192,6 +196,11 @@ app-bar {
 
  /* Mobile */
  @media screen and (min-width: 320px) and (max-width: 600px) {
+    .jumbotron {
+        width: 100%;
+        height: 100px;
+        
+    }
     
     .wrapper {
         width: 100%;
@@ -233,6 +242,25 @@ app-bar {
         top: 1rem;
     }
  }
+
+ .like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db0000;
+    
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
      
 
 
@@ -240,7 +268,8 @@ app-bar {
 @media screen and (max-width: 1200px) and (min-width: 600px) {
     .jumbotron {
         width: 100%;
-        height: 100vh;
+        height: 50vh;
+        
     }
 
     h1 {

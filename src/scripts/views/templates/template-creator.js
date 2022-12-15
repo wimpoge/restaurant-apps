@@ -54,70 +54,28 @@ ${restaurant.customerReviews.map((review) => `
    <span>${review.review}</span>
    </div>
     `
-    ).join('')}
+).join('')}
     </ul>
 
 </div>
 </div>
   `
 
-const createLikeButtonTemplate = () => `
-  <button type="button" id="likeButton" class="font-pp-semi-bold flex items-center justify-center" aria-label="like this restaurant">
-    <img
-      src="${CONFIG.BASE_EXTERNAL_IMG_URL}/heart-green-outline_lntkci.svg"
-      width="16"
-      class="mr-2"
-    /> Add to Favorites
-  </button>
-`
-
 const createUnlikeButtonTemplate = () => `
-  <button type="button" id="likeButton" class="font-pp-semi-bold flex items-center justify-center" aria-label="unlike this restaurant">
-    <img
-      src="${CONFIG.BASE_EXTERNAL_IMG_URL}/heart-green_mpqrwo.svg"
-      width="16"
-      class="mr-2"
-    /> Liked!
+  <button type="button" aria-label="like this page" id="likeButton" class="like">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `
 
-const createFavoriteRestaurantItemTemplate = (restaurant) => `
-  <div class="favorite-restaurant-card">
-    <div class="favorite-restaurant-card__img-container">
-      <a rel="noreferrer" href="#/detail/${restaurant.id}">
-        <img src="${CONFIG.BASE_IMG_URL}/${restaurant.pictureId}" />
-      </a>
-    </div>
-    <div class="favorite-restaurant-card__body">
-        <a rel="noreferrer" href="#/detail/${restaurant.id
-  }" class="text-decoration-none">
-          <h2><span class="favorite-restaurant-card__name">${restaurant.name
-  }</span> - ${restaurant.city}</h2>
-        </a>
-        <p>${restaurant.description.slice(0, 80)}...</p>
-        <div class="favorite-restaurant-card__body-footer flex items-center justify-between">
-          <div class="favorite-restaurant-card__body-rating flex items-center">
-            <img
-              src="${CONFIG.BASE_EXTERNAL_IMG_URL}/star_3_jqy0go.svg"
-              alt="Star Icon"
-              width="16"
-              class="mr-1"
-            /><p class="font-pp-medium">${restaurant.rating}</p>
-          </div>
-          <button class="favorite-restaurant-card__body-remove-favorite" data-id="${restaurant.id
-  }">
-            <img src="${CONFIG.BASE_EXTERNAL_IMG_URL
-  }/trash-grey-outline_nymsm6.svg" width="20" />
-          </button>
-        </div>
-    </div>
-  </div>
+const createLikeButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
 `
 
 export {
   createLikeButtonTemplate,
   createUnlikeButtonTemplate,
   createRestaurantItemTemplate,
-  createRestaurantDetailTemplate,
-  createFavoriteRestaurantItemTemplate
+  createRestaurantDetailTemplate
 }

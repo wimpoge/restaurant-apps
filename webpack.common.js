@@ -6,7 +6,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -28,9 +28,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/templates/index.html'),
+      template: path.resolve(__dirname, '/src/templates/index.html'),
       filename: 'index.html',
-      favicon: 'src/public/icons/Web/icons8-meals-flaticons-lineal-color-32.png'
+      favicon: path.resolve(__dirname, '/src/public/icons/Web/icons8-meals-flaticons-lineal-color-32.png')
     }),
     new CopyWebpackPlugin({
       patterns: [
