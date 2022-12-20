@@ -6,17 +6,10 @@ const createRestaurantItemTemplate = (restaurant) => `
         <img
             src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
             alt='${restaurant.name} Image'
-<<<<<<< HEAD
-            width="50%"
-        />
-        <a rel="noreferrer" href="/#/detail/${restaurant.id}" class="restauran-card_link">${restaurant.name}</a>
-        <h4">${restaurant.city}</h4>
-=======
             width="100" height="100"
         />
         <a rel="noreferrer" href="/#/detail/${restaurant.id}" id="restauran-card_link" class="restauran-card_link" style="min-width: 44px; min-height: 44px;">${restaurant.name}</a>
         <h4 width="50" height="10">${restaurant.city}</h4>
->>>>>>> master
     </div>   
     
     <div class="restauran-card__body">
@@ -31,11 +24,7 @@ const createRestaurantItemTemplate = (restaurant) => `
 const createRestaurantDetailTemplate = (restaurant) => `
 <div class="restauran-card_detail">
 <h3 style="text-align:center">${restaurant.name}</h3>
-<<<<<<< HEAD
-<img src="${CONFIG.BASE_IMAGE_URL_SM}/${restaurant.pictureId}" alt="${restaurant.name} Gambar"/>
-=======
 <img src="${CONFIG.BASE_IMAGE_URL_SM}/${restaurant.pictureId}" alt="${restaurant.name} Gambar" style="width: 100%"/>
->>>>>>> master
 <p style="text-align:center">${restaurant.address}</p>
 <p style="text-align:center">${restaurant.city}</p>
 <p>${restaurant.description}</p>

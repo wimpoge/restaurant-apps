@@ -8,10 +8,6 @@ class RestaurantSource {
 
   static async detailRestaurant (id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id))
-<<<<<<< HEAD
-    console.log(response)
-=======
->>>>>>> master
     return response.json()
   }
 

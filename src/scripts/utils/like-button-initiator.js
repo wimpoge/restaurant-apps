@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import FavoriteRestaurantIdb from '../data/favorite-movie-idb'
-import { createLikeButtonTemplate, createUnlikeButtonTemplate } from '../views/templates/template-creator'
-
-/* eslint-disable no-irregular-whitespace */
-const UnlikeButtonInitiator = {
-=======
 import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb'
 import { createLikeButtonTemplate, createUnlikeButtonTemplate } from '../views/templates/template-creator'
 
 /* eslint-disable no-irregular-whitespace */
 const LikeButtonInitiator = {
->>>>>>> master
   async init ({ likeButtonContainer, data }) {
     this._likeButtonContainer = likeButtonContainer
     this._restaurant = data.restaurant
@@ -62,8 +54,4 @@ const LikeButtonInitiator = {
   }
 }
 
-<<<<<<< HEAD
-export default UnlikeButtonInitiator
-=======
 export default LikeButtonInitiator
->>>>>>> master
