@@ -30,19 +30,18 @@ const LikeButtonInitiator = {
   },
 
   _renderLikeButtonTemplate () {
-    this._likeButtonContainer.innerHTML = createUnlikeButtonTemplate() // append html
+    this._likeButtonContainer.innerHTML = createUnlikeButtonTemplate()
 
     const likeButton = document.querySelector('#likeButton')
 
     likeButton.addEventListener('click', async () => {
-      // onClick fav the selected resto
       await FavoriteRestaurantIdb.putRestaurant(this._restaurant)
       this._renderButton()
     })
   },
 
   _renderLikedButtonTemplate () {
-    this._likeButtonContainer.innerHTML = createLikeButtonTemplate() // append html
+    this._likeButtonContainer.innerHTML = createLikeButtonTemplate()
 
     const likeButton = document.querySelector('#likeButton')
 
