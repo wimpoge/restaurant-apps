@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const path = require('path')
-
-module.exports = {
-  entry: path.resolve(__dirname, 'src/scripts/index.js'),
-=======
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default
@@ -20,10 +12,32 @@ module.exports = {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
     sw: path.resolve(__dirname, 'src/scripts/utils/sw.js')
   },
->>>>>>> master
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      maxSize: 70000,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   module: {
     rules: [
@@ -45,15 +59,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-<<<<<<< HEAD
-      template: path.resolve(__dirname, '/src/templates/index.html'),
-      filename: 'index.html',
-      favicon: path.resolve(__dirname, '/src/public/icons/Web/icons8-meals-flaticons-lineal-color-32.png')
-=======
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
       favicon: path.resolve(__dirname, 'src/public/icons/Web/icons8-meals-flaticons-lineal-color-32.png')
->>>>>>> master
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -62,9 +70,6 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/')
         }
       ]
-<<<<<<< HEAD
-    })
-=======
     }),
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js'
@@ -81,6 +86,5 @@ module.exports = {
       ]
     }),
     new BundleAnalyzerPlugin()
->>>>>>> master
   ]
 }

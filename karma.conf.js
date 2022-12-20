@@ -12,11 +12,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-<<<<<<< HEAD
-      'specs/**/*Spec.js',
-=======
       'specs/**/*Spec.js'
->>>>>>> master
     ],
 
     // list of files / patterns to exclude
@@ -25,11 +21,7 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-<<<<<<< HEAD
-      'specs/**/*Spec.js': ['webpack', 'sourcemap'],
-=======
       'specs/**/*Spec.js': ['webpack', 'sourcemap']
->>>>>>> master
     },
 
     webpack: {
@@ -38,21 +30,13 @@ module.exports = function (config) {
       // webpack watches dependencies
       // webpack configuration
       devtool: 'inline-source-map',
-<<<<<<< HEAD
-      mode: 'development',
-=======
       mode: 'development'
->>>>>>> master
     },
 
     webpackMiddleware: {
       // webpack-dev-middleware configuration
       // i. e.
-<<<<<<< HEAD
-      stats: 'errors-only',
-=======
       stats: 'errors-only'
->>>>>>> master
     },
 
     // test results reporter to use
@@ -76,11 +60,7 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-<<<<<<< HEAD
-    browsers: ['Chrome'],
-=======
     browsers: ['Firefox'],
->>>>>>> master
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -88,12 +68,6 @@ module.exports = function (config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-<<<<<<< HEAD
-    concurrency: Infinity,
-  });
-};
-=======
     concurrency: Infinity
   })
 }
->>>>>>> master
