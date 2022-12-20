@@ -5,7 +5,15 @@
     "main": "index.js",
     "scripts": {
         "start-dev": "webpack-dev-server --config webpack.dev.js",
+<<<<<<< HEAD
         "build": "webpack --config webpack.prod.js"
+=======
+        "build": "webpack --config webpack.prod.js",
+        "serve": "http-server dist",
+        "lint": "eslint ./src",
+        "test": "karma start",
+        "e2e": "codeceptjs run --steps"
+>>>>>>> master
     },
     "keywords": [],
     "author": "your_name <your_email@gmail.com>",
@@ -14,6 +22,10 @@
         "@babel/core": "^7.10.3",
         "@babel/preset-env": "^7.10.3",
         "babel-loader": "^8.1.0",
+<<<<<<< HEAD
+=======
+        "codeceptjs": "^3.3.7",
+>>>>>>> master
         "copy-webpack-plugin": "^6.0.2",
         "css-loader": "^3.6.0",
         "eslint": "^8.29.0",
@@ -23,15 +35,45 @@
         "eslint-plugin-promise": "^6.1.1",
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^4.3.0",
+<<<<<<< HEAD
         "style-loader": "^1.2.1",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0",
         "webpack-merge": "^5.0.9"
+=======
+        "http-server": "^14.1.1",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-pngquant": "^9.0.2",
+        "imagemin-webpack-plugin": "^2.4.2",
+        "jasmine-ajax": "^4.0.0",
+        "jasmine-core": "^4.2.0",
+        "karma": "^5.2.3",
+        "karma-chrome-launcher": "^3.1.1",
+        "karma-eslint": "^2.2.0",
+        "karma-firefox-launcher": "^2.1.2",
+        "karma-jasmine": "^4.0.2",
+        "karma-sourcemap-loader": "^0.3.8",
+        "karma-webpack": "^5.0.0",
+        "puppeteer": "^19.4.1",
+        "style-loader": "^1.2.1",
+        "webpack": "^4.43.0",
+        "webpack-bundle-analyzer": "^4.7.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-merge": "^5.0.9",
+        "workbox-webpack-plugin": "^6.5.4"
+>>>>>>> master
     },
     "dependencies": {
         "favicons-webpack-plugin": "^4.2.0",
         "idb": "^7.1.1",
+<<<<<<< HEAD
         "regenerator-runtime": "^0.13.5"
+=======
+        "lazysizes": "^5.3.2",
+        "regenerator-runtime": "^0.13.5",
+        "workbox-window": "^6.5.4"
+>>>>>>> master
     }
 }

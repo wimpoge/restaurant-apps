@@ -5,7 +5,8 @@ const CONFIG = {
   BASE_IMAGE_URL_SM: 'https://restaurant-api.dicoding.dev/images/small',
   DATABASE_NAME: 'restaurant-favorite-database',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'restaurant'
+  OBJECT_STORE_NAME: 'restaurant',
+  CACHE_NAME: 'RestaurantCatalogue-V1'
 
 }
 
