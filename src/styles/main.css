@@ -23,7 +23,7 @@ body {
  }
 
 .jumbotron {
-    background-image: url('/images/heros/hero-image_2.jpg');
+    background-image: url('../public/images/hero-image_2.jpg');
     background-repeat: no-repeat;
     background-position: center; 
     height: 50rem;
@@ -197,8 +197,7 @@ app-bar {
 
 @media screen and (max-width: 320px) {
     .jumbotron {
-        width: 100%;
-        height: 100px;
+        background-image: url('/images/hero-image_2-320.jpg');
     }
     .app-bar-container {
         flex-direction: column;
@@ -247,8 +246,9 @@ app-bar {
    }
 
     .jumbotron {
-        width: 100%;
-        height: 100px;
+        background-image: url('/images/hero-image_2-600.jpg');
+        justify-content: center;
+        align-items: center;
     }
     
     .wrapper {
@@ -312,9 +312,7 @@ app-bar {
 /* Tablet */
 @media screen and (max-width: 1200px) and (min-width: 600px) {
     .jumbotron {
-        width: 100%;
-        height: 50vh;
-        
+        background-image: url('/images/hero-image_2-1200.jpg');
     }
 
     h1 {
@@ -347,6 +345,7 @@ app-bar {
 /* Desktop */
 @media screen and (min-width: 1200px) {
     .jumbotron {
+        background-image: url('/images/hero-image_2-1200.jpg');
         width: 100%;
         margin: 0 auto;
     }

@@ -19,7 +19,14 @@
 <body>
   <a href="#main-content" class="skip-link">Menuju ke konten</a>
   <app-bar></app-bar>
-  <div class="jumbotron"></div>
+  <picture>
+    <source media="(max-width: 320px)" srcset="./images/hero-image_2-320.jpg">
+    <source media="(max-width: 600px)" srcset="./images/hero-image_2-600.jpg">
+    <img src="./images/hero-image_2-1200.jpg"
+         alt=""
+         >
+  </picture>
+  <!-- <div class="jumbotron"></div> -->
   <main id="main-content" tabindex="0"></main>
   <the-footer></the-footer>
 

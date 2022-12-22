@@ -4,7 +4,8 @@ const createRestaurantItemTemplate = (restaurant) => `
 <div class="restauran-card">
     <div class="restauran-card__header">
         <img
-            src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
+            data-src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
+            class="lazyload"
             alt='${restaurant.name} Image'
             width="100" height="100"
         />
@@ -62,17 +63,13 @@ ${restaurant.customerReviews.map((review) => `
   `
 
 const createUnlikeButtonTemplate = () => `
-  <button type="button" aria-label="like this page" id="likeButton" class="like">
+  <button type="button" aria-label="like this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `
 
 const createLikeButtonTemplate = () => `
-<<<<<<< HEAD
-  <button aria-label="unlike this movie" id="likeButton" class="like">
-=======
   <button aria-label="unlike this Restaurant" id="likeButton" class="like">
->>>>>>> master
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `
